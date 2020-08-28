@@ -11,6 +11,8 @@ foreach ($rooms as $single_room) {
   //Room instance
   $room = new Room ($single_room["id"], $single_room["room_number"],
     $single_room["floor"], $single_room["beds"]);
+    
+  //Room data array
   $room_data = $room->getRoom();
 ?>
 
