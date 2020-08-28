@@ -11,7 +11,18 @@ foreach ($rooms as $single_room) {
   //Room instance
   $room = new Room ($single_room["id"], $single_room["room_number"],
     $single_room["floor"], $single_room["beds"]);
-  var_dump($room);
-}
+  $room_data = $room->getRoom();
+?>
+
+<!-- Room list -->
+  <ul>
+    <li><?php echo "Id: " . $room_data["id"]; ?></li>
+    <li><?php echo "Room Number: " . $room_data["room_number"]; ?></li>
+    <li><?php echo "Floor: " . $room_data["floor"]; ?></li>
+    <li><?php echo "Beds: " . $room_data["beds"]; ?></li>
+  </ul>
+<!-- end Room list -->
+
+<?php };
 //end Foreach Room froom array Rooms
 ?>

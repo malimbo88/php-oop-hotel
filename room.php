@@ -17,6 +17,17 @@ Class Room {
     $this->beds = $_beds;
   }
 
+  //Method getRoom
+  public function getRoom() {
+    return [
+      "id" => $this->id,
+      "room_number" => $this->room_number,
+      "floor" => $this->floor,
+      "beds" => $this->beds
+    ];
+  }
+  //end Method getRoom
+
 };
 // end Room Class
 ?>
